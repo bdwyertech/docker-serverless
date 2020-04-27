@@ -17,7 +17,9 @@ LABEL org.opencontainers.image.title="bdwyertech/serverless" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.build-date=$BUILD_DATE
 
-RUN yarn global add serverless
+RUN yarn global add serverless typescript
+
+RUN apk add --no-cache ca-certificates docker-cli git
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 

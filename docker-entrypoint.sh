@@ -13,5 +13,6 @@ fi
 
 # Wrapper & Passthrough
 case "$1" in
+	serverless ) serverless;;
 	* )	serverless "$@";;
 esac
