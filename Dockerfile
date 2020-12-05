@@ -17,7 +17,7 @@ LABEL org.opencontainers.image.title="bdwyertech/serverless" \
       org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.build-date=$BUILD_DATE
 
-RUN yarn global add serverless typescript
+RUN yarn global add serverless typescript serverless-localstack serverless-manifest-plugin
 
 RUN apk add --no-cache ca-certificates docker-cli git
 
